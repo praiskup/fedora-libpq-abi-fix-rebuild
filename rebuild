@@ -1,8 +1,9 @@
 #! /bin/sh
 
 set -e
+set -x
 
-while read -r package action < list; do
+while read -r package action; do
     fedpkg clone "$package"
     cd "$package"
     if test -z "$action"; then
@@ -18,5 +19,4 @@ Relates: rhbz#1908268"
 
     fedpkg build --target=f34-build-side-37021 --nowait
     cd ..
-done
-
+done < list
