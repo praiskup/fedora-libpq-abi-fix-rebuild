@@ -1,7 +1,9 @@
 #! /bin/sh
 
+set -e
+
 while read -r package action < list; do
-    git clone "$package"
+    fedpkg clone "$package"
     cd "$package"
     if test -z "$action"; then
         # by default bump version and build
@@ -11,9 +13,10 @@ while read -r package action < list; do
         git commit -m "rebuild for libpq ABI fix
         git push
 
-Related: rhbz#1908268"
+Relates: rhbz#1908268"
     fi
 
+    fedpkg build --target=f34-build-side-37021 --nowait
     cd ..
 done
 

@@ -1,5 +1,3 @@
-postgresql
-
 apr-util
 asterisk
 bacula
@@ -49,7 +47,7 @@ nagios-plugins
 ocaml-postgresql
 opensips
 openvas-manager
-orafce
+orafce just-build
 osm2pgsql
 PDAL
 pdns
@@ -59,19 +57,19 @@ pgadmin3
 pgaudit
 pgcenter
 pgmodeler
-pg_repack
+pg_repack just-build
 pgRouting
 pg-semver
-pgsphere
+pgsphere just-build
 pg_top
 php
 php-pecl-pq
 postfix
 postgis
-postgres-decoderbufs
-postgresql-ip4r
+postgres-decoderbufs just-build
+postgresql-ip4r just-build
 postgresql-odbc
-postgresql-pgpool-II
+postgresql-pgpool-II just-build
 proftpd
 pspp
 pure-ftpd
@@ -83,7 +81,7 @@ qt
 qt5-qtbase
 rdkit
 redland
-rhdb-utils
+rhdb-utils just-build
 root
 R-RPostgres
 rsyslog
