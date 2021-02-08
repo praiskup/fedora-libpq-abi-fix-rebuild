@@ -14,7 +14,7 @@ while read -r package action; do
         git commit -m "rebuild for libpq ABI fix
         git push
 
-Relates: rhbz#1908268"
+Related: rhbz#1908268"
     fi
 
     fedpkg build --target=f34-build-side-37021 --nowait
