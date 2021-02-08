@@ -1,0 +1,19 @@
+#! /bin/sh
+
+while read -r package action < list; do
+    git clone "$package"
+    cd "$package"
+    if test -z "$action"; then
+        # by default bump version and build
+        msg="rebuild for libpq ABI fix rhbz#1908268"
+        rpmdev-bumpspec -c "$msg" *.spec
+        git add *.spec
+        git commit -m "rebuild for libpq ABI fix
+        git push
+
+Related: rhbz#1908268"
+    fi
+
+    cd ..
+done
+
